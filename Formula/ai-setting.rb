@@ -10,7 +10,7 @@ class AiSetting < Formula
   def install
     libexec.install Dir["*"]
     chmod 0555, libexec/"bin/ai-setting.js"
-    bin.write_exec_script libexec/"bin/ai-setting.js"
+    (bin/"ai-setting").write_exec_script libexec/"bin/ai-setting.js"
   end
 
   test do
