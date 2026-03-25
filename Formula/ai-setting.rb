@@ -9,6 +9,7 @@ class AiSetting < Formula
 
   def install
     libexec.install Dir["*"]
+    chmod 0555, libexec/"bin/ai-setting.js"
     bin.install_symlink libexec/"bin/ai-setting.js" => "ai-setting"
   end
 
